@@ -32,9 +32,18 @@
 Если не используете:
 - Если сайт не работает без запрета, то добавьте домен `obsproject.com` в `list-general.txt` и после этого пробуйте авторизоваться снова
 - Если сайт работает без запрета, то добавьте `obsproject.com` в `list-exclude.txt`
+
 ## Ошибка "Не удалось получить доступ к указанному ключу канала..."
 
-Используйте протокол rtpms вместо rtmp. Выбрать сервер можно [здесь](https://help.twitch.tv/s/twitch-ingest-recommendation). Пример: `rtmps://euc10.contribute.live-video.net/app`. Как использовать rtmps: `Настройки -> Трансляция -> Сервер -> Указать пользовательский сервер`
+Используйте протокол rtpms вместо rtmp. Выбрать сервер можно [здесь](https://help.twitch.tv/s/twitch-ingest-recommendation)<br>Пример: `rtmps://euc10.contribute.live-video.net/app`<br>Как использовать rtmps: `Настройки -> Трансляция -> Сервер -> Указать пользовательский сервер`
+
+## Не работает сервер трансляции Youtube(Не имеется возможности проверить лично)
+
+Проведите standart-тест в service.bat
+
+Если ошибка `YouTubeWeb : HTTP:SSL TLS1.2:SSL TLS1.3:SSL | Ping: Timeout`:
+- Windows 11: Настройте [Secure DNS](https://remontka.pro/dns-over-https-windows-11/) и убедитесь, что [работает](https://github.com/Flowseal/zapret-discord-youtube/issues/16655#issuecomment-5238252427)
+- Windows 10: [YogaDNS](https://yogadns.com). Гайд: https://www.comss.ru/page.php?id=7832
 
 > [!IMPORTANT]
 > Все бинарные файлы в папке [`bin`](./bin) взяты из [zapret-win-bundle/zapret-winws](https://github.com/bol-van/zapret-win-bundle/tree/master/zapret-winws) и [zapret/releases](https://github.com/bol-van/zapret/releases). Вы можете это проверить с помощью хэшей/контрольных сумм. Проверяйте, что запускаете, используя сборки из интернета!
